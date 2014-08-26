@@ -15,6 +15,9 @@ public class App
     public static void main( String[] args )
     {
     	int numq = 10;
+    	if (args.length > 0) {
+    		numq = Integer.parseInt(args[0]);
+    	}
     	Config config = new Config();
         HazelcastInstance h = Hazelcast.newHazelcastInstance(config);
         BlockingQueue<String> [] queues = new BlockingQueue[numq];
