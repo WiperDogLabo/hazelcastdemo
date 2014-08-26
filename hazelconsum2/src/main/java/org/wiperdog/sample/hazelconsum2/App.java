@@ -50,7 +50,7 @@ public class App
         HazelcastInstance h = Hazelcast.newHazelcastInstance(config);
         BlockingQueue<String> queues[] = new BlockingQueue[qidend - qidstart + 1];
         
-        System.err.println("Starting Hazelcast demo: receiver");
+        System.err.println("Starting Hazelcast demo: receiver, " + qidstart + " ~ " + qidend);
         for (int i = 0;i < qidend - qidstart + 1;++i) {
         	queues[i] = h.getQueue("my-distributed-queue" + (qidstart + i));
         	(new ConsumerThread<String>(queues[i])).start();

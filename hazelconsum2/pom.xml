@@ -21,7 +21,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.2.1</version>
             <configuration>
-                <mainClass>org.wiperdog.sample.hazelprod2.App</mainClass>
+                <mainClass>org.wiperdog.sample.hazelconsum2.App</mainClass>
             </configuration>
         </plugin>
     </plugins>
